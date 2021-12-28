@@ -2,6 +2,7 @@ package com.aeroxr1.basemodule
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.app.NotificationManager
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import com.aeroxr1.basemodule.databinding.ActivitySplashScreenBinding
+import com.aeroxr1.notificationmodule.NotificationUtility
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.net.ssl.HandshakeCompletedEvent
@@ -36,6 +38,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         lifecycleScope.launch{
             delay(3000)
+            NotificationUtility.showNotification(application)
             val intent = Intent(this@SplashScreenActivity,
                 Class.forName("com.aeroxr1.searchpoc.MainActivity"))
             startActivity(intent)
