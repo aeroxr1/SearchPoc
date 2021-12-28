@@ -32,6 +32,15 @@ android {
     buildFeatures {
         viewBinding true
     }
+    flavorDimensions 'base'
+    productFlavors {
+        production {
+            dimension 'base'
+        }
+        mock {
+            dimension 'base'
+        }
+    }
 }
 
 dependencies {
