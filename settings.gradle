@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SearchPoc"
 include ':app'
+include ':baseModule'
